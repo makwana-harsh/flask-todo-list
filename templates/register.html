@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | Register here</title>
+    <link rel="stylesheet" href="static/register.css">
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="container1">
+            <div class="upperBody">Fill The Form</div>
+            <form onsubmit="return validatePassword()" action="/register" method="POST">
+                Username<input type="type" name="u_name" placeholder="Enter username" required><br><br>
+                Mobile no.<input type="number" name="mobile_no" placeholder="Enter mobile number" required><br><br>
+                Email Id<input type="email" name="email_id" placeholder="Enter email id" required><br><br>
+                D.O.B<input type="date" name="d_o_b" placeholder="Enter D.O.B" required><br><br>
+                Password<input type="password" name="password" id="password" placeholder="Enter password" required><br><br>
+                Confirm Password<input type="password" id="confirm_password" placeholder="Re-Enter password" required><br>
+                <span id="error_message"></span><br><br>
+                <button type="submit" id="submitBtn">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="static/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks | Add Your Tasks</title>
+    <link rel="stylesheet" href="static/tasks.css">
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="container1">
+            <div class="upperBody">
+                <p>Your tasks >></p>
+            </div>
+            <div class="lowerBody">
+                <div class="dataBox">
+                    <ul>
+                        {% for task in tasks %}
+                        <li>
+                            {{task.task }}<br> 
+                            <a href="/delete_task/{{ task.id }}">❌ Delete</a>
+                            <br><br>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="formContainer">
+                    <form action="/add_task" method="POST">
+                        <input type="text" name="task" placeholder="Enter your task" required>
+                        <button type="submit">Add Task</button>
+                    </form>
+                </div>
+            </div>
+            <div class="logoutBtn"><a href="/logout">Logout</a></div>
+        </div>
+    </div>
+</body>
+</html>
